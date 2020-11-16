@@ -1,0 +1,16 @@
+[{
+        "id" : "0",
+        "name": "ILP Training",
+        "details" : "Two months of coding training"
+    },
+    {
+        "id" : "1",
+        "name": "Dallas Allocation",
+        "details" : "Work as consultant at location"
+    },
+    {
+        "id" : "2",
+        "name": "Austin Allocation",
+        "details" : "Work as consultant at location"
+    }
+]

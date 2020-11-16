@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "user",
+      "password": "12345",
+      "firstName": "Alan",
+      "lastName": "Nguyen",
+      "email": "an@gmail.com",
+      "auth": "user"
+    },
+    {
+      "id": 2,
+      "username": "admin",
+      "password": "admin",
+      "firstName": "admin",
+      "lastName": "user",
+      "email": "admin@admin.com",
+      "auth": "admin"
+    }
+  ],
+  "events": [
+    {
+      "name": "baby shower",
+      "date": "01/15/2020",
+      "time": "5:00PM",
+      "duration": "3 hours 15 minutes",
+      "ID": 1
+    },
+    {
+      "name": "bday",
+      "date": "03/20/1998",
+      "time": "5:00PM",
+      "duration": "2 hours",
+      "ID": 2
+    },
+    {
+      "name": "gaming lan",
+      "date": "02/20/2020",
+      "time": "12:00pm",
+      "duration": "6 hours ",
+      "ID": 3
+    },
+    {
+      "name": "tcs training",
+      "date": "11/13/2020",
+      "time": "2:30pm",
+      "duration": "1 hour",
+      "ID": 4
+    }
+  ],
+  "tickets": [
+    {
+      "eventID": 2,
+      "price": 2,
+      "amount": 1,
+      "id": 1
+    }
+  ]
+}

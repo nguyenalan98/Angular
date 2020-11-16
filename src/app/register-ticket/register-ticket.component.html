@@ -1,0 +1,22 @@
+<div class="container register-container">
+    <div class="row">
+        <div class="col-md-6 register-form-1">
+            <h3>Register Ticket</h3>
+            <form #form="ngForm" (ngSubmit)="form.valid && registerTicket(form)">
+                <div class="form-group">
+                    <input type="number" name="eventID" [(ngModel)]="model.eventID" id="eventID" class="form-control"
+                        placeholder="Enter Event ID" required />
+                </div>
+                <div class="form-group">
+                    <input type="number" name="price" [(ngModel)]="model.price" id="price" class="form-control"
+                        placeholder="enter price in USD" required />
+                </div>
+                <div class="form-group">
+                    <input type="number" name="amount" id="amount" [(ngModel)]="model.amount" class="form-control"
+                        placeholder="enter number of tickets" required />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" />
+                </div>
+            </form>
+        </div>

@@ -1,0 +1,36 @@
+[{
+    "id" : "1",
+    "name": "Iron Man",
+    "genre" : "Action",
+    "rating": "7.9",
+    "language":"english"
+},
+{
+    "id" : "2",
+    "name": "Rush Hour 2",
+    "genre" : "Comedy",
+    "rating": "6.6",
+    "language":"english"
+},
+{
+    "id" : "3",
+    "name": "Small Soldiers",
+    "genre" : "Action",
+    "rating": "6",
+    "language":"english"
+},
+{
+    "id" : "4",
+    "name": "Man in the Iron Mask",
+    "genre" : "Adventure",
+    "rating": "6.5",
+    "language":"english"
+},
+{
+    "id" : "5",
+    "name": "Titanic",
+    "genre" : "Romance",
+    "rating": "7.8",
+    "language":"english"
+}
+]

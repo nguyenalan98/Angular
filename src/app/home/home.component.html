@@ -1,0 +1,30 @@
+<!--<div>
+    <app-template-form style="float:left;"></app-template-form>
+</div>
+
+<div>
+    <app-reactive-form style="float:left;"></app-reactive-form>
+</div>
+
+<app-bug-tracker></app-bug-tracker>
+-->
+
+<br>
+<table class="table-bordered table-sm">
+    <thead style="font-weight:750;background-color:#303030;color:white;text-align:center">
+        <tr>
+            <td scope="col">ID</td>
+            <td scope="col">Name</td>
+            <td scope="col">Date</td>
+            <td scope="col">Starting Time</td>
+            <td scope="col">Duration</td>
+        </tr>
+    </thead>
+        <tr scope="row" *ngFor="let item of events;index as i;" style="text-align:center">
+            <td *ngIf="!enableEdit">{{item.ID}}</td>
+            <td *ngIf="!enableEdit">{{item.name}}</td>
+            <td *ngIf="!enableEdit">{{item.date}}</td>
+            <td *ngIf="!enableEdit">{{item.time}}</td>
+            <td *ngIf="!enableEdit">{{item.duration}}</td>
+        </tr>
+</table>
