@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AccessDataService} from '../services/access-data.service';
 
 @Component({
   selector: 'app-completed',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompletedComponent implements OnInit {
 
-  constructor() { }
+  events = new Array();
+  tickets = new Array();
+  constructor(private accessData:AccessDataService) { }
 
   ngOnInit(): void {
+    this.accessData.getData2().subscribe((response) => {
+      this.tickets= response;
+    });
+    this.accessData.getData().subscribe((response) => {
+      this.events= response;
+    });
   }
 
 }

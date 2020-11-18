@@ -17,6 +17,7 @@ export class LoginServiceService {
         const users = response;
         console.log(users);
         if (users && users.length > 0) {
+            localStorage.setItem('user', JSON.stringify(users[0]));
             localStorage.setItem('auth', JSON.stringify(users[0].auth));
             this.router.navigate(["/home"]);
         }

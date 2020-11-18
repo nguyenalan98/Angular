@@ -21,32 +21,39 @@
   ],
   "events": [
     {
+      "id": "1",
       "name": "baby shower",
       "date": "01/15/2020",
       "time": "5:00PM",
-      "duration": "3 hours 15 minutes",
-      "ID": 1
+      "duration": "3 hours 15 minutes"
     },
     {
+      "id": "2",
       "name": "bday",
       "date": "03/20/1998",
       "time": "5:00PM",
-      "duration": "2 hours",
-      "ID": 2
+      "duration": "2 hours"
     },
     {
+      "id": "3",
       "name": "gaming lan",
       "date": "02/20/2020",
       "time": "12:00pm",
-      "duration": "6 hours ",
-      "ID": 3
+      "duration": "6 hours "
     },
     {
+      "id": "4",
       "name": "tcs training",
       "date": "11/13/2020",
       "time": "2:30pm",
-      "duration": "1 hour",
-      "ID": 4
+      "duration": "1 hour"
+    },
+    {
+      "id": "5",
+      "name": "orientation",
+      "date": "01/10/2021",
+      "time": "8:00AM",
+      "duration": "3 hours 15 minutes"
     }
   ],
   "tickets": [
@@ -55,6 +62,12 @@
       "price": 2,
       "amount": 1,
       "id": 1
+    },
+    {
+      "eventID": 2,
+      "price": 2,
+      "amount": 2,
+      "id": 2
     }
   ]
 }

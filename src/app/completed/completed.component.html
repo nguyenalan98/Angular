@@ -1,1 +1,19 @@
-<p>event added!</p>
+<br>
+<body style="width:100vw;text-align:center;padding:auto;margin:auto;">
+    <h1>Tickets</h1>
+<br>
+<table class="table-bordered table-sm" style="padding:auto;margin:auto;">
+    <thead style="font-weight:750;background-color:#303030;color:white;text-align:center">
+        <tr>
+            <td scope="col">Event Name</td>
+            <td scope="col">Price</td>
+            <td scope="col">Ticket Number</td>
+        </tr>
+    </thead>
+        <tr scope="row" *ngFor="let item of tickets;index as i;" style="text-align:center">
+            <td *ngIf="!enableEdit">{{events[item.eventID].name}}</td>
+            <td *ngIf="!enableEdit">{{item.price | currency}}</td>
+            <td *ngIf="!enableEdit">{{item.amount}}</td>
+        </tr>
+</table>
+</body>

@@ -12,8 +12,7 @@ import { AccessDataService } from '../services/access-data.service';
 })
 export class RegisterComponentComponent implements OnInit {
   events = new Array();
-  model: eventModel = {ID:0, name: '', date:'', time: '', duration:''};
-  eventNum = 0;
+  model: eventModel = {id:'', name: '', date:'', time: '', duration:''};
 
   constructor(
     private registerService: RegisterServiceService,
@@ -23,10 +22,8 @@ export class RegisterComponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.accessData.getData().subscribe((response) => {
-      this.events= response;
-      this.eventNum = response.length+1;
-      console.log(this.events);
-      console.log(this.eventNum);
+      this.events = response;
+      this.model.id = (response.length+1).toString();
     });
 }
 
@@ -35,13 +32,13 @@ export class RegisterComponentComponent implements OnInit {
     this.registerService.addEvent(form.value).subscribe(() => {
       alert('event added');
       this.model = {
-        ID:0,
+        id:'',
         name: '',
         date: null,
         time: null,
         duration:null,
       };
-      this.router.navigate(['completed']);
+      this.router.navigate(['home']);
     });
   }
 }

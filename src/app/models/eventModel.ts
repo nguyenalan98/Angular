@@ -1,5 +1,5 @@
 interface eventModel {
-    ID:number
+    id:string
     name : string
     date : string
     time : string

@@ -14,10 +14,14 @@ export class AccessDataService {
   baseUrl:string;
 
   constructor(private http: HttpClient) { 
-    this.baseUrl = 'http://localhost:3000/events';
+    this.baseUrl = 'http://localhost:3000';
   }
 
   getData() : Observable<any>{
-    return this.http.get(this.baseUrl);
+    return this.http.get(this.baseUrl + '/events');
+  }
+
+  getData2() : Observable<any>{
+    return this.http.get(this.baseUrl + '/tickets');
   }
 }

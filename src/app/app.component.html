@@ -1,10 +1,13 @@
-
-<div class="container" style="display:block;margin-left:10px;">
-    <div class="row">
+<body style="width:100%;">
+    <div class="row" style="margin-left:0px;padding:10px;">
         <div>
-            <ul class="nav nav-tabs">
+            <ul class="nav nav-tabs" >
                 <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                     <a style="padding:10px;" routerLink="/home">View Events</a>
+                </li>
+
+                <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                    <a style="padding:10px;" routerLink="/tickets">View Tickets</a>
                 </li>
 
                 <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -16,26 +19,16 @@
                 </li>
 
                 <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                    <a style="padding:10px;" routerLink="/">Logout</a>
+                    <a style="padding:10px;" routerLink="/logout">Logout</a>
                 </li>
-            <!--
-                <li role="presentation" routerLinkActive="active">
-                    <a style="padding:10px;" routerLink="/employees">Employees</a>
-                </li>
-                <li role="presentation" routerLinkActive="active">
-                    <a style="padding:10px;" [routerLink]="['/contact']">Contact</a>
-                </li>
-            -->
             </ul>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+<div class="container" style="display:block;min-width:100vw;text-align:center;">
+    <div class="row" style="text-align:center;">
+        <div>
             <router-outlet></router-outlet>
         </div>
     </div>
 </div>
-
-
-<!--<app-employee-list></app-employee-list>
-<app-newemployee></app-newemployee>-->
+</body>

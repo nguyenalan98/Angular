@@ -1,28 +1,55 @@
-<div class="container register-container">
-    <div class="row">
-        <div class="col-md-6 register-form-1">
-            <h3>Register Event</h3>
-            <form #form="ngForm" (ngSubmit)="form.valid && registerEvent(form)">
-                <input type="text" [(ngModel)]="model.ID" id="ID" class="form-control" value={{numEvent}}/>
+<body style="width:100%;text-align:center;padding:auto;margin:auto;">
+    <h1>Available Events</h1>
+    <br>
+    <div class="d-flex justify-content-center" style="width:100vw;">
+        <table class="table-bordered table-sm">
+            <thead style="font-weight:750;background-color:#303030;color:white;text-align:center">
+                <tr class>
+                    <td scope="col">ID</td>
+                    <td scope="col">Name</td>
+                    <td scope="col">Date</td>
+                    <td scope="col">Starting Time</td>
+                    <td scope="col">Duration</td>
+                </tr>
+            </thead>
+            <tr scope="row" *ngFor="let item of events;index as i;" style="text-align:center">
+                <td *ngIf="!enableEdit">{{item.id}}</td>
+                <td *ngIf="!enableEdit">{{item.name}}</td>
+                <td *ngIf="!enableEdit">{{item.date}}</td>
+                <td *ngIf="!enableEdit">{{item.time}}</td>
+                <td *ngIf="!enableEdit">{{item.duration}}</td>
+            </tr>
+        </table>
+    </div>
 
-                <div class="form-group">
-                    <input type="text" name="name" [(ngModel)]="model.name" id="name" class="form-control"
-                        placeholder="enter name" required />
-                </div>
-                <div class="form-group">
-                    <input type="text" name="date" [(ngModel)]="model.date" id="date" class="form-control"
-                        placeholder="enter date" required />
-                </div>
-                <div class="form-group">
-                    <input type="text" name="time" id="time" [(ngModel)]="model.time" class="form-control"
-                        placeholder="enter starting time" required />
-                </div>
-                <div class="form-group">
-                    <input type="text" name="duration" id="duration" [(ngModel)]="model.duration"
-                        class="form-control" placeholder="enter event duration" required />
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btnSubmit" />
-                </div>
-            </form>
-        </div>
+    <div class="container register-container" style="width:100vw;text-align:center;">
+        <div class="row">
+            <div class="col-md-6 register-form-1" style="padding:auto;margin:auto;">
+                <h3>Register New Event</h3>
+                <form #form="ngForm" (ngSubmit)="form.valid && registerEvent(form)">
+                    <input type="hidden" name="id" id="id" [(ngModel)]="model.id" class="form-control" />
+
+                    <div class="form-group">
+                        <input type="text" name="name" [(ngModel)]="model.name" id="name" class="form-control"
+                            placeholder="enter name" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="date" [(ngModel)]="model.date" id="date" class="form-control"
+                            placeholder="enter date" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="time" id="time" [(ngModel)]="model.time" class="form-control"
+                            placeholder="enter starting time" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="duration" id="duration" [(ngModel)]="model.duration"
+                            class="form-control" placeholder="enter event duration" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" />
+                    </div>
+                </form>
+            </div>
+            </div>
+            </div>
+</body>
