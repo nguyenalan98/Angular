@@ -15,16 +15,16 @@ export class LoginServiceService {
       )
       .subscribe((response: any) => {
         const users = response;
-        console.log(users);
         if (users && users.length > 0) {
             localStorage.setItem('user', JSON.stringify(users[0]));
-            localStorage.setItem('auth', (users[0].auth));
+            localStorage.setItem('auth',users[0].auth);
             this.router.navigate(["/home"]);
         }
       });
   }
 
   logout(){
+    localStorage.setItem('user',null);
     localStorage.setItem('auth',null);
   }
 }

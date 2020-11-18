@@ -59,15 +59,22 @@
   "tickets": [
     {
       "eventID": 2,
-      "price": 2,
-      "amount": 1,
+      "price": 15,
       "id": 1
     },
     {
-      "eventID": 2,
-      "price": 2,
-      "amount": 2,
+      "eventID": 3,
+      "price": 20,
       "id": 2
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userID": 1,
+      "eventID": 3,
+      "ticketID": 2,
+      "ticketAmt": 2
     }
   ]
 }

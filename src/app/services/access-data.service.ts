@@ -24,4 +24,8 @@ export class AccessDataService {
   getData2() : Observable<any>{
     return this.http.get(this.baseUrl + '/tickets');
   }
+
+  getData3() : Observable<any>{
+    return this.http.get(this.baseUrl + '/orders');
+  }
 }

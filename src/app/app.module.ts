@@ -10,6 +10,7 @@ import {LoginComponentComponent} from './login-component/login-component.compone
 import {RegisterComponentComponent} from './register-component/register-component.component';
 import { CompletedComponent } from './completed/completed.component';
 import {RegisterTicketComponent} from './register-ticket/register-ticket.component'
+import {NavComponent} from './nav/nav-component';
 
 
 
@@ -20,7 +21,8 @@ import {RegisterTicketComponent} from './register-ticket/register-ticket.compone
     LoginComponentComponent,
     RegisterComponentComponent,
     CompletedComponent,
-    RegisterTicketComponent
+    RegisterTicketComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

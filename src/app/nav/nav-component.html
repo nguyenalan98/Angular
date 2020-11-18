@@ -1,0 +1,43 @@
+<div *ngIf="auth" class="row" style="margin-left:0px;padding:10px;">
+    <div>
+        <ul class="nav nav-tabs" >
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/home">View Events</a>
+            </li>
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/tickets">View Tickets</a>
+            </li>
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/admin">Register Event</a>
+            </li>
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/admin2">Register Ticket</a>
+            </li>
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div *ngIf="!auth" class="row" style="margin-left:0px;padding:10px;">
+    <div>
+        <ul class="nav nav-tabs" >
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/home">View Events</a>
+            </li>
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/tickets">View Tickets</a>
+            </li>
+
+            <li role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a style="padding:10px;" routerLink="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</div>
