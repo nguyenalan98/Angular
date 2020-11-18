@@ -18,7 +18,7 @@ export class LoginServiceService {
         console.log(users);
         if (users && users.length > 0) {
             localStorage.setItem('user', JSON.stringify(users[0]));
-            localStorage.setItem('auth', JSON.stringify(users[0].auth));
+            localStorage.setItem('auth', (users[0].auth));
             this.router.navigate(["/home"]);
         }
       });

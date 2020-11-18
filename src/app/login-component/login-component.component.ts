@@ -8,6 +8,8 @@ import { LoginServiceService } from '../services/login-service.service';
   styleUrls: ['./login-component.component.css'],
 })
 export class LoginComponentComponent implements OnInit {
+  loggedIn = (localStorage.getItem('user') != null);
+
   login = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
@@ -16,7 +18,7 @@ export class LoginComponentComponent implements OnInit {
   constructor(private loginService: LoginServiceService) {}
 
   ngOnInit(): void {
-    this.loginService.logout();
+    localStorage.setItem('user',null);
   }
 
   loginUser() {

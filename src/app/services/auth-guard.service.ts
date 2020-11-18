@@ -13,7 +13,7 @@ export class AuthGuardService implements CanActivate {
     if(auth == "admin"){
       return true;
     }
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/mustBeAdmin"]);
     return false;
   }
 }

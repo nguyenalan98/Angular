@@ -9,3 +9,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class AppComponent {
   title = 'Employees';
 }
+
+console.log(localStorage.getItem('user'));
+console.log(localStorage.getItem('auth'));

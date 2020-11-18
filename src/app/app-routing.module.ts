@@ -8,6 +8,7 @@ import {CompletedComponent} from './completed/completed.component'
 import {RegisterTicketComponent} from './register-ticket/register-ticket.component';
 import {LogoutComponent} from './logout/logout.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import {adminWarn} from './adminWarning/adminWarn.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponentComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'admin', component: RegisterComponentComponent,canActivate:[AuthGuardService]},
   {path:'admin2', component: RegisterTicketComponent,canActivate:[AuthGuardService]},
   {path:'tickets',component:CompletedComponent},
+  {path:'mustBeAdmin',component:adminWarn},
   {path:'logout',component:LogoutComponent},
   {path:'login',component:LoginComponentComponent},
   {path:'not-found',component:PageNotFoundComponent},
