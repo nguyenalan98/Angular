@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {AccessDataService} from '../services/access-data.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-event',
+  templateUrl: './event.component.html',
+  styleUrls: ['./event.component.css']
 })
-export class HomeComponent implements OnInit {
+export class EventComponent implements OnInit {
 
   events = new Array();
   user:boolean;
@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private accessData:AccessDataService) { }
 
   ngOnInit(): void {
-    this.user = (JSON.parse(localStorage.getItem('user')) != null);
-    console.log(this.user);
+    this.user = (localStorage.getItem('user') != null);
     this.accessData.getData().subscribe((response) => {
     this.events= response;
   });

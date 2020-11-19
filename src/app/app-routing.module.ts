@@ -9,12 +9,14 @@ import {RegisterTicketComponent} from './register-ticket/register-ticket.compone
 import {LogoutComponent} from './logout/logout.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import {adminWarn} from './adminWarning/adminWarn.component';
+import {EventComponent} from './eventsPage/event.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponentComponent},
   {path:'home', component: HomeComponent},
+  {path:'events',component:EventComponent,canActivate:[AuthGuardService]},
   {path:'admin', component: RegisterComponentComponent,canActivate:[AuthGuardService]},
-  {path:'admin2', component: RegisterTicketComponent},
+  {path:'admin2/:id', component: RegisterTicketComponent},
   {path:'tickets',component:CompletedComponent},
   {path:'mustBeAdmin',component:adminWarn},
   {path:'logout',component:LogoutComponent},

@@ -11,7 +11,7 @@ import {RegisterComponentComponent} from './register-component/register-componen
 import { CompletedComponent } from './completed/completed.component';
 import {RegisterTicketComponent} from './register-ticket/register-ticket.component'
 import {NavComponent} from './nav/nav-component';
-
+import {EventComponent} from './eventsPage/event.component';
 
 
 @NgModule({
@@ -22,7 +22,8 @@ import {NavComponent} from './nav/nav-component';
     RegisterComponentComponent,
     CompletedComponent,
     RegisterTicketComponent,
-    NavComponent
+    NavComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

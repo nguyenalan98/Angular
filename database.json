@@ -17,6 +17,15 @@
       "lastName": "user",
       "email": "admin@admin.com",
       "auth": "admin"
+    },
+    {
+      "id": 3,
+      "username": "james",
+      "password": "james",
+      "firstName": "james",
+      "lastName": "james",
+      "email": "james@james.com",
+      "auth": "user"
     }
   ],
   "events": [
@@ -122,6 +131,27 @@
       "ticketID": 4,
       "ticketAmt": 2,
       "id": 3
+    },
+    {
+      "userID": 1,
+      "eventID": "1",
+      "ticketID": "1",
+      "ticketAmt": 1,
+      "id": 4
+    },
+    {
+      "userID": 1,
+      "eventID": "6",
+      "ticketID": "6",
+      "ticketAmt": 2,
+      "id": 5
+    },
+    {
+      "userID": 3,
+      "eventID": "2",
+      "ticketID": "2",
+      "ticketAmt": 1,
+      "id": 6
     }
   ]
 }

@@ -1,27 +1,4 @@
-<body style="width:100%;text-align:center;padding:auto;margin:auto;">
-    <h1>Available Events</h1>
-    <br>
-    <div class="d-flex justify-content-center" style="width:100vw;">
-        <table class="table-bordered table-sm">
-            <thead style="font-weight:750;background-color:#303030;color:white;text-align:center">
-                <tr class>
-                    <td scope="col">ID</td>
-                    <td scope="col">Name</td>
-                    <td scope="col">Date</td>
-                    <td scope="col">Starting Time</td>
-                    <td scope="col">Duration</td>
-                </tr>
-            </thead>
-            <tr scope="row" *ngFor="let item of events;index as i;" style="text-align:center">
-                <td *ngIf="!enableEdit">{{item.id}}</td>
-                <td *ngIf="!enableEdit">{{item.name}}</td>
-                <td *ngIf="!enableEdit">{{item.date}}</td>
-                <td *ngIf="!enableEdit">{{item.time}}</td>
-                <td *ngIf="!enableEdit">{{item.duration}}</td>
-            </tr>
-        </table>
-    </div>
-
+<body style="width:100vw;text-align:center;padding:auto;margin:auto;">
     <div class="container register-container" style="width:100vw;text-align:center;">
         <div class="row">
             <div class="col-md-6 register-form-1" style="padding:auto;margin:auto;">
@@ -46,14 +23,14 @@
                             class="form-control" placeholder="enter event duration" required />
                     </div>
                     <div class="form-group">
-                        <input type="number" name="price" id="price" [(ngModel)]="model.price"
-                            class="form-control" placeholder="enter event price" required />
+                        <input type="number" name="price" id="price" [(ngModel)]="model.price" class="form-control"
+                            placeholder="enter event price" required />
                     </div>
                     <div class="form-group">
                         <input type="submit" class="btnSubmit" />
                     </div>
                 </form>
             </div>
-            </div>
-            </div>
+        </div>
+    </div>
 </body>

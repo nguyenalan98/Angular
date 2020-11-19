@@ -11,6 +11,10 @@
                         <p class="card-text">{{item.date}}</p>
                         <p class="card-text">{{item.time}}</p>
                         <p class="card-text">{{item.duration}}</p>
+                        <p class="card-text">{{item.price | currency}}</p>
+                        
+                        <a *ngIf="user" role="presentation" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" 
+                        href="#" routerLink="/admin2/{{item.id}}"><button>Buy Ticket</button></a>
                     </div>
                 </div>
             </div>
