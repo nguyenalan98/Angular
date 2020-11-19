@@ -25,47 +25,80 @@
       "name": "baby shower",
       "date": "01/15/2020",
       "time": "5:00PM",
-      "duration": "3 hours 15 minutes"
+      "duration": "3 hours 15 minutes",
+      "price": 15
     },
     {
       "id": "2",
       "name": "bday",
       "date": "03/20/1998",
       "time": "5:00PM",
-      "duration": "2 hours"
+      "duration": "2 hours",
+      "price": 20
     },
     {
       "id": "3",
       "name": "gaming lan",
       "date": "02/20/2020",
       "time": "12:00pm",
-      "duration": "6 hours "
+      "duration": "6 hours ",
+      "price": 16
     },
     {
       "id": "4",
       "name": "tcs training",
       "date": "11/13/2020",
       "time": "2:30pm",
-      "duration": "1 hour"
+      "duration": "1 hour",
+      "price": 10
     },
     {
       "id": "5",
       "name": "orientation",
       "date": "01/10/2021",
       "time": "8:00AM",
-      "duration": "3 hours 15 minutes"
+      "duration": "3 hours 15 minutes",
+      "price": 19
+    },
+    {
+      "id": "6",
+      "name": "check",
+      "date": "01/10/2021",
+      "time": "8:00AM",
+      "duration": "3 hours 15 minutes",
+      "price": 12
     }
   ],
   "tickets": [
     {
-      "eventID": 2,
+      "eventID": 1,
       "price": 15,
       "id": 1
     },
     {
-      "eventID": 3,
+      "eventID": 2,
       "price": 20,
       "id": 2
+    },
+    {
+      "eventID": 3,
+      "price": 16,
+      "id": 3
+    },
+    {
+      "eventID": 4,
+      "price": 10,
+      "id": 4
+    },
+    {
+      "eventID": 5,
+      "price": 19,
+      "id": 5
+    },
+    {
+      "eventID": 6,
+      "price": 12,
+      "id": 6
     }
   ],
   "orders": [
@@ -73,8 +106,22 @@
       "id": 1,
       "userID": 1,
       "eventID": 3,
-      "ticketID": 2,
+      "ticketID": 3,
       "ticketAmt": 2
+    },
+    {
+      "id": 2,
+      "userID": 1,
+      "eventID": 4,
+      "ticketID": 4,
+      "ticketAmt": 1
+    },
+    {
+      "userID": 1,
+      "eventID": 4,
+      "ticketID": 4,
+      "ticketAmt": 2,
+      "id": 3
     }
   ]
 }

@@ -1,38 +1,17 @@
 <br>
-<body style="width:100vw;text-align:center;padding:auto;margin:auto;">
-    <h1>Tickets</h1>
-<br>
-<table class="table-bordered table-sm" style="padding:auto;margin:auto;">
-    <thead style="font-weight:750;background-color:#303030;color:white;text-align:center">
-        <tr>
-            <td scope="col">Ticket ID</td>
-            <td scope="col">Event Name</td>
-            <td scope="col">Price</td>
-        </tr>
-    </thead>
-        <tr scope="row" *ngFor="let item of tickets;index as i;" style="text-align:center">
-            <td *ngIf="!enableEdit">{{item.id}}</td>
-            <td *ngIf="!enableEdit">{{events[item.eventID].name}}</td>
-            <td *ngIf="!enableEdit">{{item.price | currency}}</td>
-        </tr>
-</table>
-</body>
 <body style="width:100vw;text-align:center;">
     <div class="container register-container">
         <div class="row">
             <div class="col-md-6 register-form-1" style="padding:auto;margin:auto;text-align:center;">
                 <h3>Register New Ticket</h3>
                 <form #form="ngForm" (ngSubmit)="form.valid && registerTicket(form)">
+
                     <div class="form-group">
                         <input type="number" name="eventID" [(ngModel)]="model.eventID" id="eventID"
                             class="form-control" placeholder="Enter Event ID" required />
                     </div>
                     <div class="form-group">
-                        <input type="number" name="price" [(ngModel)]="model.price" id="price" class="form-control"
-                            placeholder="enter price in USD" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="number" name="amount" id="amount" [(ngModel)]="model.amount" class="form-control"
+                        <input type="number" name="ticketAmt" [(ngModel)]="model.ticketAmt" id="ticketAmt" class="form-control"
                             placeholder="enter number of tickets" required />
                     </div>
                     <div class="form-group">

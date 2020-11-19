@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
 
     this.accessData.getData().subscribe((response) => {
     this.events= response;
-    console.log(this.events);
   });
   }
 

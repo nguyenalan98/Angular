@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import ticketModel from 'src/app/models/ticketModel';
+import orderModel from 'src/app/models/orderModel';
 import { RegisterServiceService } from '../services/register-service.service';
 import { Router } from '@angular/router';
 import { AccessDataService } from '../services/access-data.service';
@@ -11,7 +11,7 @@ import { AccessDataService } from '../services/access-data.service';
   styleUrls: ['./register-ticket.component.css'],
 })
 export class RegisterTicketComponent implements OnInit {
-  model: ticketModel = { eventID:0, price: 0, amount:0 };
+  model: orderModel = {userID:0,eventID:0,ticketID:0,ticketAmt:0};
   events = new Array();
   tickets = new Array();
 
@@ -31,13 +31,15 @@ export class RegisterTicketComponent implements OnInit {
   }
 
   registerTicket(form) {
-    console.log(form);
-    this.registerService.addTicket(form.value).subscribe(() => {
+    let id = JSON.parse(localStorage.getItem('user')).id;
+    this.model = {userID:id,eventID:form.value.eventID,ticketID:form.value.eventID,ticketAmt:form.value.ticketAmt}
+    this.registerService.addTicket(this.model).subscribe(() => {
       alert('ticket added');
       this.model = {
-        eventID : 0,
-        price: 0,
-        amount: 0
+        userID:0,
+        eventID:0,
+        ticketID:0,
+        ticketAmt:0
       };
       this.router.navigate(['admin2']);
     });

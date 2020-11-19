@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConsoleReporter } from 'jasmine';
 import {AccessDataService} from '../services/access-data.service';
 
 @Component({
@@ -11,41 +12,34 @@ export class CompletedComponent implements OnInit {
   events = new Array();
   tickets = new Array();
   orders = new Array();
-  show:boolean;
+  users = new Array();
   auth = null;
   constructor(private accessData:AccessDataService) { }
 
   ngOnInit(): void {
+    let check = JSON.parse(localStorage.getItem('user'));
+
     this.accessData.getData2().subscribe((response) => {
-      this.tickets= response;
       this.orders = response;
     });
     this.accessData.getData().subscribe((response) => {
       this.events= response;
     });
+    this.accessData.getUsers().subscribe((response)=>{
+      this.users = response;
+    })
+    
+    this.accessData.getPersonalOrders(check.id).subscribe((response)=>{
+      this.tickets= response;
+    });
 
-    let check = JSON.parse(localStorage.getItem('user'));
     this.auth=(check.auth == "admin");
 
     if(this.auth){
-      this.show = true;
+      this.accessData.getData3().subscribe((response) => {
+        this.tickets= response;
+      });
     }
-
-    if(!this.auth){
-      let filter = new Array();
-      this.accessData.getData3().subscribe((response)=>{
-        this.tickets = response;
-        this.tickets.forEach((element)=>{
-          if(element.userID == check.id){
-            filter.push(element);
-            this.show=true;
-          }
-        })
-      })
-
-      this.tickets = filter;
-    }
-    console.log(this.tickets);
   }
 
 }

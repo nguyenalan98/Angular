@@ -7,15 +7,18 @@
     <thead style="font-weight:750;background-color:#303030;color:white;text-align:center">
         <tr>
             <td scope="col">Ticket ID</td>
+            <td scope="col">Number of tickets</td>
+            <td *ngIf="auth" scope="col">Purchased By</td>
             <td scope="col">Event Name</td>
             <td scope="col">Price</td>
         </tr>
     </thead>
         <tr scope="row" *ngFor="let item of tickets;index as i;" style="text-align:center">
-            <td *ngIf="show">{{item.id}}</td>
-            <td *ngIf="show">{{events[item.eventID-1].name}}</td>
-            <td *ngIf="show && auth">{{item.price | currency}}</td>
-            <td *ngIf="show && !auth">{{orders[item.id-1].price * item.ticketAmt | currency}}</td>
+            <td >{{item.id}}</td>
+            <td >{{item.ticketAmt}}</td>
+            <td *ngIf="auth">{{users[item.userID-1].email}}</td>
+            <td >{{events[item.eventID-1].name}}</td>
+            <td >{{orders[item.ticketID-1].price * item.ticketAmt | currency}}</td>
         </tr>
 </table>
 </body>

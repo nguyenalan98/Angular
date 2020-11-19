@@ -28,4 +28,12 @@ export class AccessDataService {
   getData3() : Observable<any>{
     return this.http.get(this.baseUrl + '/orders');
   }
+
+  getUsers() : Observable<any>{
+    return this.http.get(this.baseUrl + '/users');
+  }
+
+  getPersonalOrders(num):Observable<any>{
+    return this.http.get(`http://localhost:3000/orders?userID=${num}`);
+  }
 }

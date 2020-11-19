@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import eventModel from '../../app/models/eventModel';
-import ticketModel from '../../app/models/ticketModel';
+import orderModel from '../../app/models/orderModel';
 import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router"
 import { FormControl, FormGroup, ReactiveFormsModule,NgModel } from '@angular/forms';
@@ -15,14 +15,14 @@ export class RegisterServiceService {
 
   constructor(private http : HttpClient, private router : Router) {
     this.baseUrl = 'http://localhost:3000/events';
-    this.baseUrl2 = 'http://localhost:3000/tickets';
+    this.baseUrl2 = 'http://localhost:3000/orders';
   }
 
   addEvent(event: eventModel) {
     return this.http.post(this.baseUrl, event);
   }
 
-  addTicket(ticket: ticketModel) {
-    return this.http.post(this.baseUrl2, ticket);
+  addTicket(ticket:orderModel){
+    return this.http.post(this.baseUrl2,ticket);
   }
 }

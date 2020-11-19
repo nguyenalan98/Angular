@@ -10,12 +10,14 @@ export class NavComponent implements OnInit {
 
   user = null;
   auth = null;
+  loggedIn = false;
 
   constructor(private accessData:AccessDataService) { }
 
   ngOnInit(): void {
     this.user = JSON.parse(localStorage.getItem('user'));
     this.auth = (this.user.auth == "admin");
+    this.loggedIn = (this.user.auth == "user");
   }
 
 }

@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'',component:LoginComponentComponent},
   {path:'home', component: HomeComponent},
   {path:'admin', component: RegisterComponentComponent,canActivate:[AuthGuardService]},
-  {path:'admin2', component: RegisterTicketComponent,canActivate:[AuthGuardService]},
+  {path:'admin2', component: RegisterTicketComponent},
   {path:'tickets',component:CompletedComponent},
   {path:'mustBeAdmin',component:adminWarn},
   {path:'logout',component:LogoutComponent},

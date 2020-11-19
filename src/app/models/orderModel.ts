@@ -1,7 +1,6 @@
 interface orderModel {
-    id:string
     userID:number
-    eventID:string
+    eventID:number
     ticketID:number
     ticketAmt:number
 }

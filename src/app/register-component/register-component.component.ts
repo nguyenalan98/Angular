@@ -3,6 +3,7 @@ import eventModel from 'src/app/models/eventModel';
 import { RegisterServiceService } from '../services/register-service.service';
 import { Router } from '@angular/router';
 import { AccessDataService } from '../services/access-data.service';
+import ticketModel from '../models/ticketModel';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { AccessDataService } from '../services/access-data.service';
 })
 export class RegisterComponentComponent implements OnInit {
   events = new Array();
-  model: eventModel = {id:'', name: '', date:'', time: '', duration:''};
+  model: eventModel = {id:'', name: '', date:'', time: '', duration:'',price:0};
 
   constructor(
     private registerService: RegisterServiceService,
@@ -28,7 +29,14 @@ export class RegisterComponentComponent implements OnInit {
 }
 
   registerEvent(form) {
-    console.log(form);
+  let ticket:ticketModel={eventID:parseInt(form.value.id),price:form.value.price};
+  this.registerService.addTicket(ticket).subscribe(() => {
+    ticket = {
+      eventID : 0,
+      price: 0
+    };
+  });
+
     this.registerService.addEvent(form.value).subscribe(() => {
       alert('event added');
       this.model = {
@@ -37,6 +45,7 @@ export class RegisterComponentComponent implements OnInit {
         date: null,
         time: null,
         duration:null,
+        price:0
       };
       this.router.navigate(['home']);
     });
