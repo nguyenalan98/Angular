@@ -5,6 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router"
 import { FormControl, FormGroup, ReactiveFormsModule,NgModel } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+import ticketModel from '../../app/models/ticketModel';
 
 @Injectable({
   providedIn: 'root',
@@ -12,10 +13,12 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterServiceService {
   baseUrl:string;
   baseUrl2:string;
+  baseUrl3:string;
 
   constructor(private http : HttpClient, private router : Router) {
     this.baseUrl = 'http://localhost:3000/events';
     this.baseUrl2 = 'http://localhost:3000/orders';
+    this.baseUrl3 = 'http://localhost:3000/tickets';
   }
 
   addEvent(event: eventModel) {
@@ -24,5 +27,9 @@ export class RegisterServiceService {
 
   addTicket(ticket:orderModel){
     return this.http.post(this.baseUrl2,ticket);
+  }
+
+  addEventTicket(ticket:ticketModel){
+    return this.http.post(this.baseUrl3,ticket);
   }
 }

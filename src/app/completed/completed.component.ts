@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ConsoleReporter } from 'jasmine';
 import {AccessDataService} from '../services/access-data.service';
 
 @Component({

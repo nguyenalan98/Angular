@@ -30,7 +30,7 @@ export class RegisterComponentComponent implements OnInit {
 
   registerEvent(form) {
   let ticket:ticketModel={eventID:parseInt(form.value.id),price:form.value.price};
-  this.registerService.addTicket(ticket).subscribe(() => {
+  this.registerService.addEventTicket(ticket).subscribe(() => {
     ticket = {
       eventID : 0,
       price: 0
