@@ -152,6 +152,13 @@
       "ticketID": "2",
       "ticketAmt": 1,
       "id": 6
+    },
+    {
+      "userID": 1,
+      "eventID": "4",
+      "ticketID": "4",
+      "ticketAmt": 1,
+      "id": 7
     }
   ]
 }

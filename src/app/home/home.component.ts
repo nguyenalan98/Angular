@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {AccessDataService} from '../services/access-data.service';
+import orderModel from 'src/app/models/orderModel';
+import { RegisterServiceService } from '../services/register-service.service';
+import { Router } from '@angular/router';
+import { AccessDataService } from '../services/access-data.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',

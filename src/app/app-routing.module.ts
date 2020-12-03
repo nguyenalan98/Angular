@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
-import {RegisterComponentComponent} from './register-component/register-component.component';
 import {CompletedComponent} from './completed/completed.component'
 import {RegisterTicketComponent} from './register-ticket/register-ticket.component';
 import {LogoutComponent} from './logout/logout.component';
@@ -15,7 +14,6 @@ const routes: Routes = [
   {path:'',component:LoginComponentComponent},
   {path:'home', component: HomeComponent},
   {path:'events',component:EventComponent,canActivate:[AuthGuardService]},
-  {path:'admin', component: RegisterComponentComponent,canActivate:[AuthGuardService]},
   {path:'admin2/:id', component: RegisterTicketComponent},
   {path:'tickets',component:CompletedComponent},
   {path:'mustBeAdmin',component:adminWarn},
