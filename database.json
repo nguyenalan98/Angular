@@ -36,7 +36,7 @@
       "time": "5:00PM",
       "duration": "3 hours 15 minutes",
       "price": 15,
-      "status" : "in progress"
+      "status": "approve"
     },
     {
       "id": "2",
@@ -45,7 +45,7 @@
       "time": "5:00PM",
       "duration": "2 hours",
       "price": 20,
-      "status" : "in progress"
+      "status": "approve"
     },
     {
       "id": "3",
@@ -54,7 +54,7 @@
       "time": "12:00pm",
       "duration": "6 hours ",
       "price": 16,
-      "status" : "in progress"
+      "status": "decline"
     },
     {
       "id": "4",
@@ -63,7 +63,7 @@
       "time": "2:30pm",
       "duration": "1 hour",
       "price": 10,
-      "status" : "in progress"
+      "status": "decline"
     },
     {
       "id": "5",
@@ -72,7 +72,7 @@
       "time": "8:00AM",
       "duration": "3 hours 15 minutes",
       "price": 19,
-      "status" : "in progress"
+      "status": "approve"
     },
     {
       "id": "6",
@@ -81,16 +81,7 @@
       "time": "8:00AM",
       "duration": "3 hours 15 minutes",
       "price": 12,
-      "status" : "in progress"
-    },
-    {
-      "id": "7",
-      "name": "7",
-      "date": "7",
-      "time": "7",
-      "duration": "7",
-      "price": 7,
-      "status" : "in progress"
+      "status": "approve"
     }
   ],
   "tickets": [
@@ -123,11 +114,6 @@
       "eventID": 6,
       "price": 12,
       "id": 6
-    },
-    {
-      "eventID": 7,
-      "price": 7,
-      "id": 7
     }
   ],
   "orders": [

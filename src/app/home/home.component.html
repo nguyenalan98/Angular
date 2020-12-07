@@ -13,7 +13,7 @@
                         <p class="card-text">{{item.duration}}</p>
                         <p class="card-text">{{item.price | currency}}</p>
                         
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#emodal" (click)="setID(i)">
+                        <button *ngIf="user" type="button" class="btn btn-primary" data-toggle="modal" data-target="#emodal" (click)="setID(i)">
                             Buy Ticket 
                           </button>
                           

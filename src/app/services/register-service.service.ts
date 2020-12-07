@@ -33,7 +33,10 @@ export class RegisterServiceService {
     return this.http.post(this.baseUrl3,ticket);
   }
 
-  updateEvent(event:eventModel){
-    return this.http.put(this.baseUrl,event);
+  updateEvent(number,event:eventModel){
+    let url = this.baseUrl+"/"+(number+1);
+    return this.http.put((url),event).subscribe((data)=>{
+      console.log(data);
+    });
   }
 }

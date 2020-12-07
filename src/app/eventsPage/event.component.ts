@@ -20,7 +20,7 @@ export class EventComponent implements OnInit {
   constructor(private accessData:AccessDataService,private registerService:RegisterServiceService,private router:Router) { }
 
   ngOnInit(): void {
-    this.user = (localStorage.getItem('user') != null);
+    this.user = (localStorage.getItem('auth') == 'admin');
     this.accessData.getData().subscribe((response) => {
     this.events= response;
     this.model.id = (response.length+1).toString();
@@ -54,15 +54,14 @@ export class EventComponent implements OnInit {
     approveID(number){
       this.accessData.getEvent(number).subscribe((item)=>{
         item[0].status = "approve";
-        console.log(item[0]);
+        this.registerService.updateEvent(number,item[0]);
       });
     }
 
     declineID(number){
       this.accessData.getEvent(number).subscribe((item)=>{
         item[0].status = "decline";
-        this.registerService.updateEvent(item[0]);
-        console.log(item[0]);
+        this.registerService.updateEvent(number,item[0]);
       });
     }
     

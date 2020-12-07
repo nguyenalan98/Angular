@@ -13,7 +13,7 @@ import {EventComponent} from './eventsPage/event.component';
 const routes: Routes = [
   {path:'',component:LoginComponentComponent},
   {path:'home', component: HomeComponent},
-  {path:'events',component:EventComponent,canActivate:[AuthGuardService]},
+  {path:'events',component:EventComponent},
   {path:'tickets',component:CompletedComponent},
   {path:'mustBeAdmin',component:adminWarn},
   {path:'logout',component:LogoutComponent},
