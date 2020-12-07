@@ -5,6 +5,7 @@ interface eventModel {
     time : string
     duration: string
     price:number
+    status:string
 }
 
 export default eventModel;

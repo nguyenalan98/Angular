@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import {AccessDataService} from './services/access-data.service';
 import { HomeComponent } from './home/home.component';
 import {LoginComponentComponent} from './login-component/login-component.component';
-import {RegisterComponentComponent} from './register-component/register-component.component';
 import { CompletedComponent } from './completed/completed.component';
 import {RegisterTicketComponent} from './register-ticket/register-ticket.component'
 import {NavComponent} from './nav/nav-component';
@@ -19,7 +18,6 @@ import {EventComponent} from './eventsPage/event.component';
     AppComponent,
     HomeComponent,
     LoginComponentComponent,
-    RegisterComponentComponent,
     CompletedComponent,
     RegisterTicketComponent,
     NavComponent,

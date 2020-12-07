@@ -32,4 +32,8 @@ export class RegisterServiceService {
   addEventTicket(ticket:ticketModel){
     return this.http.post(this.baseUrl3,ticket);
   }
+
+  updateEvent(event:eventModel){
+    return this.http.put(this.baseUrl,event);
+  }
 }

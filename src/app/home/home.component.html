@@ -13,8 +13,10 @@
                         <p class="card-text">{{item.duration}}</p>
                         <p class="card-text">{{item.price | currency}}</p>
                         
-                        <a *ngIf="user" role="presentation" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" 
-                        href="#" routerLink="/admin2/{{item.id}}"><button>Buy Ticket</button></a>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#emodal" (click)="setID(i)">
+                            Buy Ticket 
+                          </button>
+                          
                     </div>
                 </div>
             </div>
@@ -30,7 +32,7 @@
                 <div class="container register-container">
                     <div class="row">
                         <div class="col-md-6 register-form-1" style="padding:auto;margin:auto;text-align:center;">
-                            <h3>How many tickets would you like for event: {{events[eventID-1].name}}</h3>
+                            <h3>How many tickets would you like for {{events[eventID].name}}</h3>
                             <form #form="ngForm" (ngSubmit)="form.valid && registerTicket(form)">
 
                                 <div class="form-group">

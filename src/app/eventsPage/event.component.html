@@ -10,6 +10,8 @@
                     <td scope="col">Date</td>
                     <td scope="col">Starting Time</td>
                     <td scope="col">Duration</td>
+                    <td scope="col">Status</td>
+                    <td scope="col">Actions</td>
                 </tr>
             </thead>
             <tr scope="row" *ngFor="let item of events;index as i;" style="text-align:center">
@@ -18,6 +20,13 @@
                 <td *ngIf="!enableEdit">{{item.date}}</td>
                 <td *ngIf="!enableEdit">{{item.time}}</td>
                 <td *ngIf="!enableEdit">{{item.duration}}</td>
+                <td *ngIf="!enableEdit">{{item.status}}</td>
+                <td> <button style="margin:5px" type="button" (click)="approveID(i)">
+                    Approve 
+                  </button>
+                  <button type="button" (click)="declineID(i)">
+                    Decline 
+                  </button> </td>
             </tr>
         </table>
     </div>

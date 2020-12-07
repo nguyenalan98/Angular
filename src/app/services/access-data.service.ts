@@ -36,4 +36,8 @@ export class AccessDataService {
   getPersonalOrders(num):Observable<any>{
     return this.http.get(`http://localhost:3000/orders?userID=${num}`);
   }
+
+  getEvent(num):Observable<any>{
+    return this.http.get(`http://localhost:3000/events?id=${num+1}`);
+  }
 }

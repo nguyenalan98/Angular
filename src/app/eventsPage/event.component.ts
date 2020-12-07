@@ -13,8 +13,9 @@ import { Router } from '@angular/router';
 export class EventComponent implements OnInit {
 
   events = new Array();
-  model: eventModel = {id:'', name: '', date:'', time: '', duration:'',price:0};
+  model: eventModel = {id:'', name: '', date:'', time: '', duration:'',price:0,status:'in progress'};
   user:boolean;
+  eventID = 0;
 
   constructor(private accessData:AccessDataService,private registerService:RegisterServiceService,private router:Router) { }
 
@@ -43,9 +44,25 @@ export class EventComponent implements OnInit {
           date: null,
           time: null,
           duration:null,
-          price:0
+          price:0,
+          status:''
         };
 
+      });
+    }
+
+    approveID(number){
+      this.accessData.getEvent(number).subscribe((item)=>{
+        item[0].status = "approve";
+        console.log(item[0]);
+      });
+    }
+
+    declineID(number){
+      this.accessData.getEvent(number).subscribe((item)=>{
+        item[0].status = "decline";
+        this.registerService.updateEvent(item[0]);
+        console.log(item[0]);
       });
     }
     
