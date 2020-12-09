@@ -4,7 +4,6 @@ import {HomeComponent} from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
 import {CompletedComponent} from './completed/completed.component'
-import {RegisterTicketComponent} from './register-ticket/register-ticket.component';
 import {LogoutComponent} from './logout/logout.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import {adminWarn} from './adminWarning/adminWarn.component';
